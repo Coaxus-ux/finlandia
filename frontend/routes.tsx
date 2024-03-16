@@ -2,6 +2,7 @@ import HelloWorldView from 'Frontend/views/helloworld/HelloWorldView.js';
 import MainLayout from 'Frontend/views/MainLayout.js';
 import { lazy } from 'react';
 import { createBrowserRouter, RouteObject } from 'react-router-dom';
+import RegisterView from './views/register/RegisterView';
 
 const AboutView = lazy(async () => import('Frontend/views/about/AboutView.js'));
 
@@ -14,6 +15,7 @@ export const routes = [
       { path: '/about', element: <AboutView />, handle: { title: 'About' } },
     ],
   },
+  { path: '/register', element: <RegisterView />, handle: { title: 'Register' } },
 ] as RouteObject[];
 
 export default createBrowserRouter(routes);

@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: db
+    build: .
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data:
